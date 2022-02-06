@@ -1,6 +1,6 @@
 {
   "name": "ngrok Client",
-  "version": "2.1.10",
+  "version": "2.2.1",
   "slug": "ngrok",
   "description": "A ngrok client for Hass.io",
   "webui": "http://[HOST]:[PORT:4040]",
@@ -26,8 +26,8 @@
     "auth_token": "",
     "region": "us",
     "dynu_token": "",
-    "dynu_id": "",
-    "dynu_webredirectid": "",
+    "dynu_id": 0000000,
+    "dynu_webredirectid": 0000000,
     "tunnels": [
       {
         "name": "hass",
