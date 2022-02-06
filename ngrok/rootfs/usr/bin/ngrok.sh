@@ -19,6 +19,15 @@ if bashio::var.has_value "$(bashio::config 'region')"; then
 else
   echo "No region defined, default region is US."
 fi
+if bashio::var.has_value "$(bashio::config 'dynu_token')"; then
+  echo "dynu_token: $(bashio::config 'dynu_token')" >> $configPath
+fi
+if bashio::var.has_value "$(bashio::config 'dynu_id')"; then
+  echo "dynu_id: $(bashio::config 'dynu_id')" >> $configPath
+fi
+if bashio::var.has_value "$(bashio::config 'dynu_webredirectid')"; then
+  echo "dynu_webredirectid: $(bashio::config 'dynu_webredirectid')" >> $configPath
+fi
 echo "tunnels:" >> $configPath
 for id in $(bashio::config "tunnels|keys"); do
   name=$(bashio::config "tunnels[${id}].name")
