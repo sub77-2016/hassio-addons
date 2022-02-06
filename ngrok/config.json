@@ -4,8 +4,8 @@
   "slug": "ngrok",
   "description": "A ngrok client for Hass.io",
   "webui": "http://[HOST]:[PORT:4040]",
-  "url": "https://github.com/dy1io/hassio-addons",
-  "stage": "deprecated",
+  "url": "https://github.com/sub77-2016/hassio-addons",
+  "stage": "testing",
   "arch": [
     "aarch64",
     "amd64",
