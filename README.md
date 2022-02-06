@@ -1,4 +1,4 @@
-# Home Assistant Add-ons by dy1io
+# Home Assistant Add-ons by sub77
 
 ## About
 
