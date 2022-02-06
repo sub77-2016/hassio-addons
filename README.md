@@ -16,7 +16,7 @@ Add the repository url listed below to your Supervisor Add-on Store tab in Home
 Assistant.
 
 ```txt
-https://github.com/dy1io/hassio-addons
+https://github.com/sub77-2016/hassio-addons
 ```
 
 ## Thank you
