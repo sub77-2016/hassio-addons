@@ -93,5 +93,3 @@ configfile=$(cat $configPath)
 bashio::log.debug "Config file: \n${configfile}"
 bashio::log.info "Starting ngrok..."
 ngrok start --config $configPath --all
-sleep 30
-exec /usr/bin/dynu.sh
