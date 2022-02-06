@@ -94,4 +94,4 @@ bashio::log.debug "Config file: \n${configfile}"
 bashio::log.info "Starting ngrok..."
 ngrok start --config $configPath --all
 public_url=$(curl -s http://localhost:4040/api/tunnels/hass | cut -d"," -f3 | cut -b 14- | sed -e 's/^"//' -e 's/"$//')
-curl -X POST "https://api.dynu.com/v2/dns/$dynu_id/webRedirect/$dynu_webredirectid" -H  "accept: application/json" -H  "API-Key: $dynu_token" -H  "Content-Type: application/json" -d "{\"nodeName\":\"\",\"redirectType\":\"UF\",\"state\":true,\"url\":\"$public_url\",\"cloak\":false,\"includeQueryString\":true,\"title\":\"\",\"metaKeywords\":\"\",\"metaDescription\":\"\"}"
+curl -X POST "https://api.dynu.com/v2/dns/$(bashio::config 'dynu_id')/webRedirect/$(bashio::config 'dynu_webredirectid')" -H  "accept: application/json" -H  "API-Key: $(bashio::config 'dynu_token')" -H  "Content-Type: application/json" -d "{\"nodeName\":\"\",\"redirectType\":\"UF\",\"state\":true,\"url\":\"$public_url\",\"cloak\":false,\"includeQueryString\":true,\"title\":\"\",\"metaKeywords\":\"\",\"metaDescription\":\"\"}"
